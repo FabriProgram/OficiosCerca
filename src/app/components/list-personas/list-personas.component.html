@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="title">
+      <h4>Listado de personas</h4>
+      <button type="button" class="btn btn-dark" routerlink="/add">Agregar Persona</button>
+    </div>
+    <table class="table table-primary">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">APELLIDO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let persona of listPersonas" class="table-dark">
+            <td>{{ persona.id }}</td>
+            <td>{{ persona.nombre }}</td>
+            <td>{{ persona.apellido }}</td>
+            <td>
+              <button routerLink="/edit/{{ persona.id }}" type="button" class="btn btn-primary btn-sm">editar</button>
+              <button type="button" class="btn btn-outline-danger ms-2">eliminar</button>
+            </td>
+          </tr>
+          <tr class="table-danger">
+            <th scope="row">Danger</th>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="table-warning">
+            <th scope="row">Warning</th>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="table-info">
+            <th scope="row">Info</th>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Light</th>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
