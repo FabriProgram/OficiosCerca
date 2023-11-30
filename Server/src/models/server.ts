@@ -1,4 +1,5 @@
 import express, {Application, Request, Response} from 'express'
+import routesPersonas from '../routes/persona';
 
 class Server{
     private app: Application;
@@ -20,6 +21,7 @@ class Server{
                 msg: "API Working"
             })
         })
+        this.app.use('/api/personas', routesPersonas)
     }
 }
 
